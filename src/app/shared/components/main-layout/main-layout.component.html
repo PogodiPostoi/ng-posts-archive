@@ -1,0 +1,17 @@
+<nav class="navbar main">
+    <h1 class="cur-pointer" routerLink="/">Архив постов</h1>
+    <h2 class="btn btn-link" routerLink="/admin/dashboard">Вход</h2>
+</nav>
+<div class="body">
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="footer">
+        <a class="btn btn-link" href="https://github.com/PogodiPostoi/ng-posts-archive" target="_blank">© PogodiPostoi</a>
+        <div class="rotate-container">
+            <div class="rotate-element" [ngClass]="{'rotate': rotate}" (click)="toggleRotate()" #rotateElement>
+                🏄
+            </div>
+        </div>
+    </div>
+</div>
