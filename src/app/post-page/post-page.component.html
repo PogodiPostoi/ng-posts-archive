@@ -1,0 +1,21 @@
+<div *ngIf="post$ | async as post; else loading">
+    <div class="post">
+        <div class="header">
+
+            <strong>{{ post.author }}</strong>
+            <small>{{ post.date | date:'dd MMMM yyyy':null:'ru' }}</small>
+            <h1>{{ post.title }}</h1>
+        </div>
+        <div class="white-bg b-rad-15">
+            <quill-view-html
+                [content]="post.text"
+            ></quill-view-html>
+        </div>
+    </div>
+</div>
+<ng-template
+    class="text-center"
+    #loading
+>
+    Загружаю пост...
+</ng-template>

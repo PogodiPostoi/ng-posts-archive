@@ -1,0 +1,17 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+  padding: 1rem 2rem;
+
+  h2 {
+    text-align: center
+  }
+
+  a {
+    margin-top: 2rem;
+  }
+}
